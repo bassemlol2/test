@@ -44,7 +44,13 @@ for line in emails:
 	#response = > {"data":"Email already in use.","id":"533","key":"","status":"false"}
 	# IF Statment
 	if "Email already in use" in response.content:
-	 print "LIVE => "+final
+ 	 print "LIVE => "+final
+	 text_file = open("live.txt", "w")
+	 n = text_file.write(final)
+         text_file.close()
+
+
+	 
 	 
 	else:
 	 print "Dead => "+final
